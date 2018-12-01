@@ -1,4 +1,3 @@
 ----
-Qiita記事　初めてのCircleCI用
+helloWorldGOGO
 ----
-https://qiita.com/uguisu/items/87c1c4fc810289020274
