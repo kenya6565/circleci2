@@ -10,8 +10,8 @@ jobs:
       - image: circleci/golang:1.9
 
     ##ステップが実行されるディレクトリ
-    working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
-　　　　　　　　
+    working_directory: /go/src/github.com/uguisuhohokekyo/helloWorldGOGO
+
     ##実行単位ステップを記述していく
     steps:
 
