@@ -15,15 +15,9 @@ jobs:
     ##実行単位ステップを記述していく
     steps:
 
-      ##working_directoryを設定
+      ##working_directoryにチェックアウト
       - checkout
-
-      ##bashコマンドを記載
       - run:
-
-       ##runの名前
-       name: hello test
-         
-       ##コマンド
-       command: |
-        go test -v ./cmd/hello_test.go
+        name: hello test
+        command: |
+         go test -v ./cmd/hello_test.go
