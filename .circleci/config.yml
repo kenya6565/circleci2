@@ -21,9 +21,9 @@ jobs:
         ##bashコマンドを記載
         - run:
 
-         ## runの名前
+         ##runの名前
          name: hello test
          
-         ## コマンド
+         ##コマンド
          command: |
           go test -v ./cmd/hello_test.go
