@@ -1,5 +1,15 @@
 package main
 
+import: "fmt"
+
+fun main(){
+    e := english()
+    j := japanese()
+    c := chinese()
+   fmt.Println(e)
+   fmt.Println(j)
+   fmt.Println(c)
+}
 func english() string {
     return "Hello, world"
 }
