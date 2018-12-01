@@ -1,5 +1,6 @@
 package main
 
+/*
 import "fmt"
 
 func main(){
@@ -11,6 +12,7 @@ func main(){
    fmt.Println(j)
    fmt.Println(c)
 }
+*/
 
 func english() string {
     return "Hello, world"
