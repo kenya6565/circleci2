@@ -17,10 +17,12 @@ jobs:
 
       ##working_directoryにチェックアウト
       - checkout
+
       - run:
         name: hello build
         command: |
          go build -v ./cmd/hello.go
+
       - run:
         name: hello test
         command: |
