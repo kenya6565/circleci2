@@ -18,12 +18,12 @@ jobs:
       ##working_directoryを設定
       - checkout
 
-        ##bashコマンドを記載
-        - run:
+      ##bashコマンドを記載
+      - run:
 
-         ##runの名前
-         name: hello test
+       ##runの名前
+       name: hello test
          
-         ##コマンド
-         command: |
-          go test -v ./cmd/hello_test.go
+       ##コマンド
+       command: |
+        go test -v ./cmd/hello_test.go
