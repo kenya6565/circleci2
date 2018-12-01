@@ -2,14 +2,16 @@ package main
 
 import "fmt"
 
-fun main(){
-    var e string = english()
-    var j string = japanese()
-    var c string = chinese()
+func main(){
+   var e string = english()
+   var j string = japanese()
+   var c string = chinese()
+   
    fmt.Println(e)
    fmt.Println(j)
    fmt.Println(c)
 }
+
 func english() string {
     return "Hello, world"
 }
