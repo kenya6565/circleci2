@@ -1,0 +1,29 @@
+##circleciのバージョン
+version:　２
+##ジョブ定義
+jobs:
+　##自動的に実行されるジョブ。必須。                              
+  build:
+    ##dockerがタスクの実行環境                        
+    docker:
+      ##dockerイメージ
+      - image: circleci/golang:1.9
+
+    ##ステップが実行されるディレクトリ
+    working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
+　　　　　　　　
+　　##実行単位ステップを記述していく
+    steps:
+　　
+    　##working_directoryを設定
+      - checkout
+　　
+    　　##bashコマンドを記載
+　　　　- run:
+　　
+    　　 ## runの名前
+         name: hello test
+    
+         ## コマンド
+　　　　 command: |
+　　　　  go test -v ./cmd/hello_test.go
