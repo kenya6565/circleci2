@@ -1,5 +1,5 @@
 ##circleciのバージョン
-version:　２
+version: 2
 ##ジョブ定義
 jobs:
 　##自動的に実行されるジョブ。必須。                              
