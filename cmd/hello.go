@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 fun main(){
-    e := english()
-    j := japanese()
-    c := chinese()
+    var e string = english()
+    var j string = japanese()
+    var c string = chinese()
    fmt.Println(e)
    fmt.Println(j)
    fmt.Println(c)
