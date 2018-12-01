@@ -5,7 +5,7 @@ func English() string {
 }
 
 func Japanese() string {
-    return "Hello, world"      /* <- ここがバグ */
+//    return "Hello, world"      /* <- ここがバグ */
     return "こんにちは、世界"
 }
 
