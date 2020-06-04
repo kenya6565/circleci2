@@ -1,20 +1,26 @@
-##circleciのバージョン
+# Golang CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-go/ for more details
 version: 2
-##ジョブ定義
 jobs:
-  ##自動的に実行されるジョブ。必須。                              
   build:
-    ##dockerがタスクの実行環境                        
     docker:
-      ##dockerイメージ
+      # specify the version
       - image: circleci/golang:1.9
 
-    ##ステップが実行されるディレクトリ
-    working_directory: /go/src/github.com/uguisuhohokekyo/helloWorldGOGO
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/postgres:9.4
 
-    ##実行単位ステップを記述していく
+    #### TEMPLATE_NOTE: go expects specific checkout path representing url
+    #### expecting it in the form of
+    ####   /go/src/github.com/circleci/go-tool
+    ####   /go/src/bitbucket.org/circleci/go-tool
+    working_directory: /go/src/github.com/{{ORG_NAME}}/{{REPO_NAME}}
     steps:
-
-      ##working_directoryにチェックアウト
       - checkout
-      - run: go test -v ./cmd/hello/
+
+      # specify any bash command here prefixed with `run: `
+      - run: go get -v -t -d ./...
+      - run: go test -v ./...
